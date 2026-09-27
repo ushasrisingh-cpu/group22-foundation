@@ -1,3 +1,11 @@
+> **Historical pre-implementation specification.** This file records the
+> original target security posture. It includes proposed EKS, Snyk, OWASP ZAP,
+> and Teams controls that are not being claimed as implemented. The current
+> security controls and verified evidence are documented in
+> [Final Implementation Alignment](implementation-alignment.md),
+> [security guidance](../docs/security.md), and
+> [ADR 005](../engineering-decisions/ADR-005-security-scanning.md).
+
 # Inventory Management System Security Specification
 
 ## 1. Security objectives
