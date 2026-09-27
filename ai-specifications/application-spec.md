@@ -1,3 +1,10 @@
+> **Historical pre-implementation specification.** This file records the
+> application baseline and intended work when the capstone began. It is not a
+> statement of the final implementation. The current application runs on Java
+> 17; see [Final Implementation Alignment](implementation-alignment.md),
+> [the root README](../README.md), and the accepted engineering decisions for
+> the implemented platform.
+
 # Inventory Management Application Specification
 
 ## 1. Application name and purpose
