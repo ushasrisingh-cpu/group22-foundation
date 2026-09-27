@@ -28,7 +28,7 @@ The repository requires these GitHub Actions variables:
 - `TERRAFORM_AWS_ROLE_ARN`: ARN of a persistent, least-privilege OIDC role.
 - `APPLICATION_DEPLOY_ROLE_ARN`: ARN of the persistent application deployment
   role, which is restricted to the project ECR repository and ECS services.
-- `TERRAFORM_STATE_BUCKET`: `inventory-management-650694420501-ap-south-1-archive`.
+- `TERRAFORM_STATE_BUCKET`: `inventory-management-<aws-account-id>-ap-south-1-archive`.
 
 The OIDC role lives in the persistent archive stack, outside the disposable
 dev and prod Terraform states. Its trust policy accepts tokens only from this
