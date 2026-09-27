@@ -1,3 +1,11 @@
+> **Historical pre-implementation specification.** This file records the
+> originally proposed pipeline, including EKS, Snyk, OWASP ZAP, and Teams.
+> The implemented delivery design uses three GitHub Actions workflows for CI,
+> approved Terraform infrastructure, and ECS CD. Refer to
+> [Final Implementation Alignment](implementation-alignment.md),
+> [deployment guidance](../docs/deployment.md), and
+> [the CI/CD architecture](../architecture/cicd-flow.md) for current behavior.
+
 # Inventory Management System CI/CD Engineering Specification
 
 ## 1. Pipeline triggers
