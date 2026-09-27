@@ -32,4 +32,10 @@ Terraform owns foundational infrastructure and the baseline ECS task definition.
 
 ## Availability and cost
 
-The VPC spans two Availability Zones. The dev design avoids a NAT gateway and assigns public task IPs while security groups restrict inbound traffic. Production configuration uses private tasks, NAT, stronger RDS resilience, HTTPS, and longer retention. This distinction keeps the demonstration affordable without presenting dev shortcuts as production defaults.
+The VPC spans two Availability Zones. The dev design avoids a NAT gateway and
+assigns public task IPs while security groups restrict inbound traffic.
+Production configuration targets private tasks, NAT, stronger RDS resilience,
+and longer retention. HTTPS remains a planned production enhancement because a
+controlled domain and ACM certificate were not available during the capstone.
+This distinction keeps the demonstration affordable without presenting dev
+shortcuts as production defaults.
