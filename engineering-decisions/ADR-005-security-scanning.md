@@ -8,7 +8,10 @@ No single scanner covers source secrets, infrastructure policy, Kubernetes manif
 
 ## Decision
 
-Use blocking Gitleaks, Checkov, and Trivy checks in CI. Run Maven tests as a quality gate. Support Sonar analysis when repository configuration exists. Document every Checkov skip with a specific rationale.
+Use blocking Gitleaks, Checkov, and Trivy checks in CI. Run Maven tests as a
+quality gate. Run SonarCloud analysis when the repository `SONAR_TOKEN` is
+available, and retain the Quality Gate result as reviewed delivery evidence.
+Document every Checkov skip with a specific rationale.
 
 ## Alternatives considered
 
@@ -18,7 +21,11 @@ Use blocking Gitleaks, Checkov, and Trivy checks in CI. Run Maven tests as a qua
 
 ## Consequences and trade-offs
 
-Layered tools improve coverage but increase CI duration and maintenance. False positives require documented review. Sonar is conditional, while Snyk and ZAP remain future improvements.
+Layered tools improve coverage but increase CI duration and maintenance. False
+positives require documented review. SonarCloud analysis depends on its
+repository secret, while Snyk and ZAP remain future improvements. Whether the
+SonarCloud Quality Gate is a required merge check is configured in GitHub, not
+in this repository file.
 
 ## Security implications
 
