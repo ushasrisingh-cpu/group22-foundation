@@ -13,10 +13,11 @@ The six AI Engineering Specifications were created before implementation, as req
 | Kubernetes manifests | Kustomize overlays retained for local portability and CI scanning | Implemented locally |
 | Container registry | Amazon ECR with immutable commit-SHA tags | Implemented |
 | Database | Private MySQL RDS with Secrets Manager | Implemented |
-| CI/CD | Separate GitHub Actions CI and ECS CD workflows | Implemented |
+| Application runtime | Java 17 Spring Boot application with Actuator readiness endpoint | Implemented |
+| CI/CD | Three GitHub Actions workflows: CI, approved Terraform infrastructure, and ECS CD | Implemented |
 | AWS authentication | GitHub OIDC and short-lived role credentials | Implemented |
 | Infrastructure | Modular Terraform with dev, prod, and archive environments | Implemented |
-| Log archive | CloudWatch events compressed and copied to persistent S3 | Implemented and tested |
+| Log archive | An on-demand script reads CloudWatch logs, compresses them, and writes them to persistent S3 | Implemented and tested |
 | Portable database backup | One-off two-container Fargate task | Implemented and restored |
 | Autoscaling | ECS CPU target tracking | Implemented and tested |
 
@@ -24,9 +25,9 @@ The six AI Engineering Specifications were created before implementation, as req
 
 **Enforced in CI:** Maven tests, Gitleaks, Terraform formatting and validation, Checkov for Terraform, Checkov for rendered Kubernetes manifests, Docker build, and Trivy blocking of fixable high and critical image findings.
 
-**Conditional:** SonarQube or SonarCloud analysis runs only when repository configuration provides a token. The current workflow does not prove a mandatory quality gate.
+**SonarCloud:** The CI workflow runs SonarCloud analysis when the repository's `SONAR_TOKEN` secret is available. The latest reviewed change passed the SonarCloud Quality Gate with no new security issues or security hotspots. Whether a quality-gate check is a merge requirement is controlled by GitHub repository protection settings, rather than this Terraform or application code.
 
-**Future:** Snyk, OWASP ZAP, Microsoft Teams notifications, and mandatory Sonar quality-gate enforcement.
+**Future:** Snyk, OWASP ZAP, Microsoft Teams notifications, and centralized AWS security services remain future improvements.
 
 ## Why ECS replaced EKS
 

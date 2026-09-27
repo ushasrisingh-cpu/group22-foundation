@@ -1,3 +1,10 @@
+> **Historical pre-implementation specification.** This file captures the
+> original validation plan. References to Java 11, future Terraform work, and
+> Kubernetes self-healing describe the baseline at that time. The implemented
+> Java 17, ECS Fargate, CI, backup, restore, and autoscaling evidence is in
+> [Final Implementation Alignment](implementation-alignment.md) and
+> [testing guidance](../docs/testing.md).
+
 # Inventory Management System Testing and Validation Specification
 
 ## 1. Existing application baseline

@@ -1,3 +1,10 @@
+> **Historical pre-implementation specification.** This file is the original
+> documentation plan, not the final documentation status. Its EKS, Java 11,
+> Snyk, OWASP ZAP, and Teams references are proposed requirements from that
+> earlier plan. The implemented documentation set is indexed in the
+> [root README](../README.md) and reconciled in
+> [Final Implementation Alignment](implementation-alignment.md).
+
 # Inventory Management System Documentation Specification
 
 ## 1. Purpose

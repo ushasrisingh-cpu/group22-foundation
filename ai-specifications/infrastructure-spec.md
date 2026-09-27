@@ -1,3 +1,10 @@
+> **Historical pre-implementation specification.** This file preserves the
+> original EKS-based infrastructure proposal. The approved final cloud runtime
+> is ECS Fargate behind an Application Load Balancer, with private MySQL RDS.
+> See [Final Implementation Alignment](implementation-alignment.md) and
+> [ADR 002](../engineering-decisions/ADR-002-ecs-fargate.md) for the decision,
+> rationale, and current implementation status.
+
 # Inventory Management System Infrastructure Specification
 
 ## 1. Target cloud: AWS
